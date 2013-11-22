@@ -1,29 +1,59 @@
 package PSI;
 
 import org.junit.Test;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-import Webdriver.WebTester;
 
-public class geriTest extends WebTester{
-	String index = "http://localhost/index.php";
-	String acc = "lukas@gmail.com";
-	String pss = "test";
+public class geriTest extends TestCasePSI{
+
+	
+
+	@Override
+	public void after() throws Exception {
+		 //super.after();
+	}
 	
 	@Test
-	public void prisijunkti() throws Exception{
-		login(index, acc, pss);
-		//findElementByXpath("//*/div[2]/a");
-		//find("//*/div[2]/a", "xpath").click();;
-		findAll("Kreipiniai", "Pavadinimas");
-		//click("Kodas");
-		//selectDropDownText("Kreipinių sprendimas ", "Inžinieriai");
-		selectDropDownText("Registrai ", "Klientai");
-		click("Pridėti naują klientą");
-		setInputById("Klientas_k_kodas", "kodas123");
-		//setContext("//div[3]//div/div[2]");
-		//setInput("Kliento kodas", "kodas123",2);
-		//setInput("Pavadinimas", "pavadinimas123");
-		//setInput("Adresas", "Adresas123");
+	public void adminasKreipiniai() throws Exception{
+		//login(t, HelpDesk, acc, pss);
+		//t.selectDropDownText("Kreipinių sprendimas ", "Kreipiniai");
+		/*t.click("Kodas");
+		t.sleep(10);
+		t.click("Pavadinimas");
+		t.sleep(10);
+		t.click("Aprašymas");
+		t.sleep(10);
+		t.click("Kreipinys gautas");
+		t.sleep(10);
+		t.click("Tipas");
+		t.sleep(10);
+		t.click("Būsena");
+		t.sleep(10);
+		t.click("Veiksmai");
+		t.sleep(10);
+		
+		t.setInputById("paieska", "Test");
+		t.click("Kreipiniai");
+		t.sleep(10);
+		*/
+		//----
+		//View
+		//----
+		//t.click("View");
+		//---dakodinti nes neveikia
+		
+		//----
+		//Update
+		//----
+		//t.click("Update");
+		
+		
+		//----
+		//Delete
+		//----
+		//t.click("Delete");
+		
+		//t.find("Pridėti naują kreipinį");
+		//t.click("Pridėti naują kreipinį");
 	}
+	
 }
