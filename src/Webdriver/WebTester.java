@@ -492,11 +492,38 @@ public class WebTester {
 		log("Submited");
 	}
 	
+	public void loginBux(Application app, String usr, String pass) throws Exception {
+		setApplication(app);
+		log(application.getFullPath() + " " + usr + "/" + pass);
+		get(application.getFullPath());
+
+		highlight(driver.findElement(By.xpath("//*[contains(@src, 'images2/login.jpg')]"))).click();
+		highlight(driver.findElement(By.name("username"))).sendKeys(usr);
+		highlight(driver.findElement(By.name("password"))).sendKeys(pass);
+		log("10s laukiama, kol ivesite capathca");
+		sleep(10);
+		highlight(driver.findElement(By.xpath("//*[contains(@value, 'Submit')]"))).click();
+		//highlight(driver.findElement(By.xpath("//*/button"))).click();
+		log("Submited");
+	}
+	
 		public void selectDropDownText(String mainMenu, String subMenu) throws Exception{
 			Actions builder = new Actions(driver);
 			builder.moveToElement(find(mainMenu)).build().perform();
 			builder.moveToElement(find(subMenu)).build().perform();
 			highlight(find(subMenu)).click();
+		}
+		
+		public void selectItemByDataIdAndText(String mainMenu, String subMenu, int index) throws Exception{
+			click("//*[contains(@data-id, "+mainMenu+")]", index);
+			sleep(1);
+			click("(//*[text()='"+subMenu+"'])[last()]",index);
+		}
+		
+		public void selectItemByDataIdAndText(String mainMenu, String subMenu) throws Exception{
+			click("//*[contains(@data-id, "+mainMenu+")]", 0);
+			sleep(1);
+			click("(//*[text()='"+subMenu+"'])[last()]", 0);
 		}
 		
 	public void casLogin(Application app, String usr, String pass) throws Exception {
@@ -946,6 +973,11 @@ public class WebTester {
 		alterFrame();
 	}
 
+	public void closePopUp() throws Exception{
+		driver.close();
+		alterFrame();
+	}
+	
 	private void alterFrame() throws Exception {
 		waitForWindowsClose();
 		handleStack.pop();
