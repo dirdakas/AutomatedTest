@@ -6,7 +6,7 @@
 	<classpathentry kind="lib" path="C:/Users/lietutis/workspace/AutomatedTest.git/trunk/selenium-2.37.0/commons-lang3-3.1/commons-lang3-3.1-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/lietutis/workspace/AutomatedTest.git/trunk/selenium-2.37.0/commons-lang3-3.1/commons-lang3-3.1-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/lietutis/workspace/AutomatedTest.git/trunk/selenium-2.37.0/commons-lang3-3.1/commons-lang3-3.1-tests.jar"/>
-	<classpathentry kind="lib" path="C:/Users/lietutis/workspace/AutomatedTest.git/trunk/selenium-2.37.0/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lietutis/workspace/AutomatedTest.git/trunk/selenium-2.37.0/junit-4.10.jar" sourcepath="C:/Users/lietutis/.m2/repository/junit/junit/4.10/junit-4.10-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/lietutis/workspace/AutomatedTest.git/trunk/selenium-2.37.0/selenium-java-2.37.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/lietutis/workspace/AutomatedTest.git/trunk/selenium-2.37.0/selenium-java-2.37.0-srcs.jar"/>
 	<classpathentry kind="lib" path="C:/Users/lietutis/workspace/AutomatedTest.git/trunk/selenium-2.37.0/selenium-server-standalone-2.37.0.jar"/>
